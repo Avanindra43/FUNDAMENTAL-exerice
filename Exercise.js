@@ -1,3 +1,57 @@
+function triangleLeft(height) {
+    for (let i = 1; i <= height; i++) {
+     let row = "";
+     for (let j = 1; j <= i; j++) {
+        row += "*";
+     }
+     console.log(row);
+    }
+    }
+    
+  triangleLeft(4);
+
+function triangleRight(height) {
+    for (let i = 0; i < height; i++) {
+        let row = "";
+        for (let j = 1; j <= height; j++) {
+         if ( j < height - i) row += " ";//   *,
+         else row += "*";   
+    }
+    console.log(row);
+}
+}
+
+triangleRight(4);
+
+console.log("Pemisah");
+
+function triangleDownLeft(height) {
+    for (let i = 0; i <= height; i++) {
+       let row = "";
+       for (let j = 0; j < height; j++) {
+        if (j < i) row += " "
+        else row += "*";
+        
+       }
+        console.log(row);
+    }
+}
+
+triangleDownLeft(4);
+
+function triangleDownRight(height) {
+    for (let i = 0; i < height; i++) {
+        let row = "";
+        for (let j = 0; j < height - i; j++) {
+         if (j < height ) row += "*";
+         else row += " "
+            
+        }
+        console.log(row);
+    }
+}
+
+triangleDownRight(4)
 // function excelColumn(column) {
 
 // }
