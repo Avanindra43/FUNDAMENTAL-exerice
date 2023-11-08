@@ -61,18 +61,6 @@ triangleDownRight(4)
 
 // console.log(code);
 
-function titleToNumber(column) {
-    let result = 0;
-    
-    for (let i = 0; i < column.length; i++) {
-        result = result * 26 + (column.charCodeAt(i) - 64); 
-    }
-    
-    return result;
-}
-
-console.log(titleToNumber("AB"));
-
 // arr = [2,2,1,5,1]
 
 // function single(array) {    
@@ -86,6 +74,28 @@ console.log(titleToNumber("AB"));
 // };
 // }
 // console.log(single(arr));
+
+/*
+function titleToNumber(column) {
+    let result = 0;
+    
+    for (let i = 0; i < column.length; i++) {
+        result = result * 26 + (column.charCodeAt(i) - 64); 
+    }
+    
+    return result;
+}
+
+console.log(titleToNumber("AB"));
+*/
+
+// const columnSheet("") {
+//     const alphabets = "abcdefghijklmnopqrstuvwxyz".toUpperCase().split("");
+//     const array = col
+//         .toUpperCase()
+//         .split("")
+//         .map((char) => alphabets.indexOf(char) + 1);
+// }
 
 
 class Produk {
@@ -248,27 +258,30 @@ tokopedia.checkout()
 tokopedia.showCart()
 tokopedia.checkProductStock("coding for dummies")
 
-function single(array) {
-    let res = ''; 
+// function single(array) {
+//     let res = ''; 
 
-    for (let i = 0; i < array.length; i++) {
-        let foundDuplicate = false;
-        for (let j = 0; j < array.length; j++) {
-            if (i !== j && array[i] === array[j]) {
-                foundDuplicate = true;
-                break;
-            }
-        }
+//     for (let i = 0; i < array.length; i++) {
+//         let foundDuplicate = false;
+//         for (let j = 0; j < array.length; j++) {
+//             if (i !== j && array[i] === array[j]) {
+//                 foundDuplicate = true;
+//                 break;
+//             }
+//         }
         
-        if (!foundDuplicate) {
-            res = array[i];
-            break; 
-        }
-    }
+//         if (!foundDuplicate) {
+//             res = array[i];
+//             break; 
+//         }
+//     }
     
-    return res;
-}
+//     return res;
+// }
 
+const unik = (numb) => {
+    return numb.sort((a,b) => a - b).filter((num, idx) => num != numb[idx - 1] && num != numb[idx - 1])
+}
 
 const arr = [4,1,2,1,2];
 console.log(single(arr));
@@ -296,3 +309,4 @@ function anagram(string1, string2) {
 
 console.log(anagram("anagram", "nagaram")); 
 console.log(anagram("three", "tree")); 
+
