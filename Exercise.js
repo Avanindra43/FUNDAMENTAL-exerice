@@ -280,11 +280,12 @@ tokopedia.checkProductStock("coding for dummies")
 // }
 
 const unik = (numb) => {
-    return numb.sort((a,b) => a - b).filter((num, idx) => num != numb[idx - 1] && num != numb[idx - 1])
+    return numb.sort((a,b) => a - b).filter((num, idx) => 
+    num != numb[idx - 1] && num != numb[idx - 1])
 }
 
 const arr = [4,1,2,1,2];
-console.log(single(arr));
+console.log(unik(arr));
 
 
 
@@ -310,3 +311,18 @@ function anagram(string1, string2) {
 console.log(anagram("anagram", "nagaram")); 
 console.log(anagram("three", "tree")); 
 
+function romanNumb(string) {
+    const roman = {I : 1, IV : 4, V : 5, IX : 9, X : 10, L : 50, C : 100, D : 500, M : 1000}
+    let res = 0;
+    for (let i = 0; i < string.length; i++) {
+        if (roman[string[i]] < roman[string[i+1]]){
+            res -= roman[string[i]] 
+        }
+        else res += roman[string[i]]
+    }
+    return res
+}
+
+console.log(romanNumb("II"));
+
+console.log("test");
