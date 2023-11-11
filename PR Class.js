@@ -1,4 +1,44 @@
+let x = 10;
+x **= 5;
+console.log(x);
 
+let x1 = -100;
+x1 ||= 5;
+console.log(x1);
+
+console.log("Volvo" + 16);
+
+function toCelsius(fahrenheit) {
+    return (5/9) * (fahrenheit-32);
+  }
+  
+  let value = toCelsius;
+
+  console.log(value);
+
+  const person = {
+    firstName : "John",
+    lastName : "Cena",
+    age : 43,
+    eyeColor : "grey",
+    fullName : function () {
+        return `And his name is ${this.firstName} ${this.lastName}!`;
+    }
+  };
+
+  console.log(person.firstName);
+  console.log(person["eyeColor"]);
+
+  console.log(person.fullName());
+
+  console.log('We are the so-called "Vikings" from the north.');
+  console.log("The character is called backslash.");
+
+  let txt = new String ("John");
+let text = new String ("John")
+
+console.log(txt == text);
+console.log(txt === text);
 
 //buat class Bio data
 // class bio data akan menampung data user berupa
@@ -39,12 +79,12 @@
 // console.log(age);
 
 class Biodata {
-    constructor (name, dob, alamat, mobile, email) {
-        this.name = name;
-        this.dob = dob;
-        this.alamat = alamat;
-        this.mobile = mobile;
-        this.email = email;
+    constructor () {
+        this.name = "Udin";
+        this.dob = "2000-08-01";
+        this.alamat = "desa suka miskin";
+        this.mobile = 144506;
+        this.email = "udin@gmail.com";
         
     }
 
