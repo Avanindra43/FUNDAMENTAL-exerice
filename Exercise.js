@@ -385,8 +385,8 @@ class Ojol extends Biodata {
         this.plat_nomor = plat_nomor;
     }
     
-    get ojol() {
-        return 
+    get say() {
+        return console.log(`Halo nama saya ${this.name}, saya berprofesi sebagai ${this.profesi} dan kendaraan saya adaah ${this.kendaraan}`);
     }
 
 };
@@ -397,10 +397,8 @@ console.log(biodata.age());
 console.log(biodata.say());
 
 const dokter = new Dokter(biodata.name, biodata.dob, biodata.alamat, biodata.mobile, biodata.email, "Rs J", biodata.profesi, "1985")
-const ojol = new Ojol()
+const ojol = new Ojol(biodata.name, biodata.dob, biodata.alamat, biodata.mobile, biodata.email, "nissan r35", "ojol", "B 3214 TYL")
 
 console.log(dokter.workExp());
 console.log(dokter.say);
-
-console.log(ojol.plat_nomor);
-console.log(biodata);
+console.log(ojol.say);
